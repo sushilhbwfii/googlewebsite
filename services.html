@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Impactful Numbers</title>
+    <meta name="description" content="Explore our range of services, including tax planning, financial statement preparation, bookkeeping, compliance, and advisory services. [Your Firm Name] delivers tailored accounting solutions to meet individual and business needs effectively.">
+<meta name="keywords" content="Chartered Accountant services, tax planning, financial statements, bookkeeping, compliance services, accounting advisory, business accounting, personal finance solutions, [City/Region, e.g., Pokhara, Nepal] CA services">
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "serviceType": "Chartered Accountant Services",
+    "provider": {
+      "@type": "AccountingService",
+      "name": "Your Firm Name",
+      "url": "https://yourwebsite.com/services"
+    },
+    "offers": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Tax Planning & Preparation",
+          "description": "Customized tax strategies to minimize liabilities and ensure compliance."
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Financial Statement Preparation",
+          "description": "Preparation of accurate and timely financial statements."
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Bookkeeping",
+          "description": "Organized and efficient bookkeeping services for businesses."
+        }
+      }
+    ]
+  }
+  </script>
+  
+    <style>
+        .satisfaction-count {
+            font-size: 2em;
+            font-weight: bold;
+            color: #3e41dc; /* Green color for satisfaction */
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <section id="services">
+        <h2>Our Services</h2>
+        <div class="service-card">
+          <h3>Financial Statement Preparation</h3>
+          <p>Helping businesses prepare accurate and timely financial statements.</p>
+        </div>
+        <div class="service-card">
+          <h3>Tax Planning & Preparation</h3>
+          <p>Customized tax strategies to minimize liabilities and ensure compliance.</p>
+        </div>
+        <div class="service-card">
+          <h3>Bookkeeping</h3>
+          <p>Efficient bookkeeping services to keep your business organized and compliant.</p>
+        </div>
+    </section>
+
+    <!-- Success Metrics Section -->
+    <section id="metrics">
+        <h2>Our Impactful Numbers</h2>
+        <div class="satisfaction-count" id="satisfactionCountClient">0 Happy Clients</div>
+        <div class="satisfaction-count" id="satisfactionCountSatisfaction">0% Customer Satisfaction</div>
+        <div class="satisfaction-count" id="satisfactionCountCompliance">0% Compliance Rate</div>
+    </section>
+
+    <script>
+        function animateSatisfaction(id, start, end, duration, suffix = '') {
+            let element = document.getElementById(id);
+            let range = end - start;
+            let current = start;
+            let increment = end > start ? 1 : -1;
+            let stepTime = Math.abs(Math.floor(duration / range));
+
+            let timer = setInterval(() => {
+                current += increment;
+                element.textContent = current + suffix;
+
+                if (current === end) {
+                    clearInterval(timer);
+                }
+            }, stepTime);
+        }
+
+        // Start the animations for each metric
+        animateSatisfaction("satisfactionCountClient", 0, 900, 1000, " + Happy Clients");       // 100 clients
+        animateSatisfaction("satisfactionCountSatisfaction", 0, 99, 1000, "% Customer Satisfaction"); // 95% satisfaction
+        animateSatisfaction("satisfactionCountCompliance", 0, 99, 1000, "% Compliance Rate");     // 99% compliance
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- good -->
