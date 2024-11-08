@@ -3,286 +3,439 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Expert Chartered Accountant services for businesses and individuals. Offering financial statement preparation, tax planning, bookkeeping, compliance, and advisory services. Discover our transparent pricing and easy online checkout for tailored accounting solutions. Learn more about us and our commitment to excellence in financial management.">
-  <meta name="keyword" content="Chartered Accountant, CA services, financial statement preparation, tax planning, bookkeeping, compliance services, advisory services, accounting solutions, CA pricing, CA cart checkout, tax compliance, business accounting, financial management, Pokhara CA, CA Nepal">
+  <meta name="description" content="Expert Chartered Accountant services for businesses and individuals. Offering financial statement preparation, tax planning, bookkeeping, compliance, and advisory services.">
+  <meta name="keywords" content="Chartered Accountant, CA services, financial statement preparation, tax planning, bookkeeping, compliance services, advisory services, accounting solutions, CA pricing, CA cart checkout, tax compliance, business accounting, financial management, Pokhara CA, CA Nepal">
   <title>Sushil Subedi - Chartered Accountant</title>
   <link rel="stylesheet" href="stylesmultibinnionaireceo.css">
-  <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "AccountingService",
-      "name": "Your Firm Name",
-      "description": "Chartered Accountant services including tax planning, financial statement preparation, and bookkeeping.",
-      "image": "https://yourwebsite.com/logo.jpg",
-      "url": "https://yourwebsite.com",
-      "telephone": "+9779846481293",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Lakeside, Pokhara",
-        "addressLocality": "Pokhara",
-        "addressRegion": "Gandaki Province",
-        "postalCode": "33700",
-        "addressCountry": "NP"
-      },
-      "openingHours": "Mo-Su 07:00-21:00",
-      "areaServed": {
-        "@type": "Place",
-        "name": "Pokhara, Nepal"
-      },
-      "sameAs": [
-        "https://www.facebook.com/yourbusiness",
-        "https://www.instagram.com/yourbusiness",
-        "https://www.linkedin.com/company/yourbusiness"
-      ]
-    }
-    </script>
-    
-</head>
-<body>
-
-  <!-- Navigation Bar -->
-  <nav>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About Us</a></li>
-      <li><a href="services.html">Services</a></li>
-      <li><a href="pricingcart.html">Pricing Cart</a></li>
-    </ul>
-  </nav>
-
-  <!-- Home Section -->
-  <header>
-    <h1> <strong>SUSHIL SUBEDI </strong></h1>
-    <h2>Finance Consultant</h2>
-    <p>Your trusted  Accountant for precise financial solutions</p>
-    <a href="#services" class="cta">Explore Services</a>
-  </header>
-
-  <!-- About Us Section -->
-  <section id="about">
-    <h2>About Us</h2>
-    <p>"A Legacy of Trust and Precision"</p>
-    <p>With years of experience, we provide reliable and accurate financial services to meet our clients' needs with the highest level of integrity.</p>
-  </section>
-
-  <!-- Services Section -->
-  <section id="services">
-    <h2>Our Services</h2>
-    <div class="service-card">
-      <h3>Financial Statement Preparation</h3>
-      <p>Helping businesses prepare accurate and timely financial statements.</p>
-    </div>
-    <div class="service-card">
-      <h3>Tax Planning & Preparation</h3>
-      <p>Customized tax strategies to minimize liabilities and ensure compliance.</p>
-    </div>
-    <div class="service-card">
-      <h3>Bookkeeping</h3>
-      <p>Efficient bookkeeping services to keep your business organized and compliant.</p>
-    </div>
-  </section>
-
-  <!-- Success Metrics Section -->
+  <link rel="shortcut icon" href="hero.jpg" type="image/x-icon">
   <style>
-    .satisfaction-count {
-        font-size: 2em;
-        font-weight: bold;
-        color: #3e41dc; /* Green color for satisfaction */
-        margin: 10px 0;
+    /* Basic reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
-</style>
+    
+    /* Navigation Bar */
+    nav {
+      background-color: #3e41dc;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 20px;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+      transition: transform 0.3s zoom;
+    }
+    
+    /* Logo Animation */
+    .logo img {
+      height: 40px;
+      width: auto;
+      transition: transform 0.3s zoom;
+    }
+    .logo:hover img {
+      transform: scale(1.1);
+    }
+
+    /* Navigation Links */
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+    nav ul li a {
+      color: #ffffff;
+      text-decoration: none;
+      font-size: 16px;
+      padding: 10px;
+      transition: color 0.3s, background-color 0.3s;
+      border-radius: 5px;
+    }
+    nav ul li a:hover {
+      background-color: #ffffff;
+      color: #3e41dc;
+    }
+
+    /* Hamburger Icon */
+    .hamburger {
+      display: none;
+      cursor: pointer;
+      font-size: 24px;
+      color: #ffffff;
+    }
+
+    /* Mobile Responsive */
+    @media (max-width: 768px) {
+      nav ul {
+        display: none;
+        flex-direction: column;
+        background-color: #3e41dc;
+        position: absolute;
+        top: 50px;
+        left: 0;
+        width: 100%;
+        padding: 10px;
+      }
+      nav ul.show {
+        display: flex;
+      }
+      .hamburger {
+        display: block;
+      }
+    }
+
+    /* Home Section */
+    header {
+      text-align: center;
+      padding: 150px 20px 50px;
+      color: #3e41dc;
+    }
+    header h1 {
+      font-size: 2.5em;
+      animation: zoom 1s ease-out;
+    }
+    header h2 {
+      font-size: 1.5em;
+      color: #333;
+      margin: 10px 0;
+    }
+    header p {
+      font-size: 1.1em;
+      color: #555;
+    }
+    .cta {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #3e41dc;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+    .cta:hover {
+      background-color: #555;
+    }
+
+    /* Section Styling */
+    section {
+      padding: 50px 20px;
+    }
+    
+    /* Keyframes for Animations */
+    @keyframes zoom {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1.05);
+    opacity: 0.9;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.image-container {
+  flex: 1;
+}
+
+.profile-photo {
+  width: 100%;
+  max-width: 900px;
+  margin-top: 100px; /* Adjust the size as needed */
+  border-radius: 10px;
+}
+
+.text-container {
+  flex: 2;
+  padding-left: 90px;
+}
+.text-container h1 {
+  font-size: 80px;
+  margin-top: 81px;
+}
+.text-container h2 {
+  font-size: 40px;
+  margin-top: 5px;
+}
+.text-container p {
+  font-size: 20px;
+  margin-top: 5px;
+
+}
+
+.piclink  {
+  display: flex; /* Align icons horizontally */
+  justify-content: center; /* Center the icons */
+  gap: 15px; /* Space between icons */
+}
+
+/* Style for individual social media icons */
+.piclink a {
+  width: 80px; /* Width of the icon */
+  height: 80px; /* Height of the icon */
+  display: flex;
+  justify-content: center; /* Center the icon inside the container */
+  align-items: center; /* Vertically center the icon */
+  border-radius: 50%; /* Make icons circular */
+  background-color: #3b5998; /* Default background color for Facebook (change for others) */
+  transition: all 0.3s ease; /* Add transition for hover effect */
+}
+
+/* Optional hover effect */
+.piclink a:hover {
+  transform: scale(1.1); /* Slight zoom effect */
+  background-color: #8b9dc3; /* Change color on hover */
+}
+
+/* Icon image style */
+.piclink img {
+  width: 70%; /* Make the icon image 70% of the container size */
+  height: 70%; /* Make the icon image 70% of the container size */
+  object-fit: cover; /* Maintain aspect ratio */
+}
+
+
+  </style>
 </head>
 <body>
-<!-- <section id="services"> -->
-    <!-- <h2>Our Services</h2>
-    <div class="service-card">
-      <h3>Financial Statement Preparation</h3>
-      <p>Helping businesses prepare accurate and timely financial statements.</p>
-    </div>
-    <div class="service-card">
-      <h3>Tax Planning & Preparation</h3>
-      <p>Customized tax strategies to minimize liabilities and ensure compliance.</p>
-    </div>
-    <div class="service-card">
-      <h3>Bookkeeping</h3>
-      <p>Efficient bookkeeping services to keep your business organized and compliant.</p>
-    </div>
-</section> -->
+
+<!-- Navigation Bar -->
+<nav>
+  <a href="index.html" class="logo">
+    <img src="hero.jpg" alt="Company Logo">
+  </a>
+  <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+  <ul id="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About Us</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="pricingcart.html">Pricing Cart</a></li>
+  </ul>
+</nav>
+<div class="container">
+  <div class="image-container">
+    <img src="daihero.jpg" alt="Your Photo" class="profile-photo">
+  </div>
+  <div class="text-container">
+   
+  <h1><strong>SUSHIL SUBEDI</strong></h1>
+  <h2>Finance Consultant_ 
+  Your trusted Consultant for precise financial solutions</h2>
+  <div class="contact-buttons">
+    <a href="mailto:sushilsubedi.com.np@gmail.com" class="contact-btn">Email Now</a>
+    <a href="tel:+9779766610249" class="contact-btn">Call Now</a>
+  </div>
+  </div>
+  </div>
+  
+<!-- Home Section -->
+<!-- <header>
+
+  <h1><strong>SUSHIL SUBEDI</strong></h1>
+  <h2>Finance Consultant</h2>
+  <p>Your trusted Consultant for precise financial solutions</p>
+  <a href="services.html" class="cta">Explore Services</a>
+</header> -->
+
+<!-- JavaScript for Menu Toggle -->
+<script>
+  function toggleMenu() {
+    document.getElementById('nav-links').classList.toggle('show');
+  }
+</script>
+<section id="about">
+  <h2>About Us</h2>
+  <p>"A Legacy of Trust and Precision"</p>
+  <p>With years of experience, we provide reliable and accurate financial services to meet our clients' needs with the highest level of integrity.</p>
+</section>
+<section id="services">
+  <h2>Our Services</h2>
+  <div class="service-card">
+    <h3>Financial Statement Preparation</h3>
+    <p>Helping businesses prepare accurate and timely financial statements.</p>
+  </div>
+  <div class="service-card">
+    <h3>Tax Planning & Preparation</h3>
+    <p>Customized tax strategies to minimize liabilities and ensure compliance.</p>
+  </div>
+  <div class="service-card">
+    <h3>Bookkeeping</h3>
+    <p>Efficient bookkeeping services to keep your business organized and compliant.</p>
+  </div>
+</section>
 
 <!-- Success Metrics Section -->
 <section id="metrics">
-    <h2>Our Impactful Numbers</h2>
-    <div class="satisfaction-count" id="satisfactionCountClient">0 Happy Clients</div>
-    <div class="satisfaction-count" id="satisfactionCountSatisfaction">0% Customer Satisfaction</div>
-    <div class="satisfaction-count" id="satisfactionCountCompliance">0% Compliance Rate</div>
+  <h2>Our Impactful Numbers</h2>
+  <div class="satisfaction-count" id="satisfactionCountClient">0 Happy Clients</div>
+  <div class="satisfaction-count" id="satisfactionCountSatisfaction">0% Customer Satisfaction</div>
+  <div class="satisfaction-count" id="satisfactionCountCompliance">0% Compliance Rate</div>
 </section>
 
 <script>
-    function animateSatisfaction(id, start, end, duration, suffix = '') {
-        let element = document.getElementById(id);
-        let range = end - start;
-        let current = start;
-        let increment = end > start ? 1 : -1;
-        let stepTime = Math.abs(Math.floor(duration / range));
+  function animateSatisfaction(id, start, end, duration, suffix = '') {
+      let element = document.getElementById(id);
+      let range = end - start;
+      let current = start;
+      let increment = end > start ? 1 : -1;
+      let stepTime = Math.abs(Math.floor(duration / range));
 
-        let timer = setInterval(() => {
-            current += increment;
-            element.textContent = current + suffix;
+      let timer = setInterval(() => {
+          current += increment;
+          element.textContent = current + suffix;
 
-            if (current === end) {
-                clearInterval(timer);
-            }
-        }, stepTime);
-    }
+          if (current === end) {
+              clearInterval(timer);
+          }
+      }, stepTime);
+  }
 
-    // Start the animations for each metric
-    animateSatisfaction("satisfactionCountClient", 0, 900, 2000, " + Happy Clients");       // 100 clients
-    animateSatisfaction("satisfactionCountSatisfaction", 0, 99, 2000, "% Customer Satisfaction"); // 95% satisfaction
-    animateSatisfaction("satisfactionCountCompliance", 0, 99, 2000, "% Compliance Rate");     // 99% compliance
+  // Start the animations for each metric
+  animateSatisfaction("satisfactionCountClient", 0, 900, 1000, " + Happy Clients");       // 100 clients
+  animateSatisfaction("satisfactionCountSatisfaction", 0, 95, 1000, "% Customer Satisfaction"); // 95% satisfaction
+  animateSatisfaction("satisfactionCountCompliance", 0, 99, 1000, "% Compliance Rate");     // 99% compliance
 </script>
-
-
-  <!-- Testimonials Section -->
- 
-  <!-- Pricing Section -->
-  <section id="pricing">
-    <h2>Choose the Right Plan</h2>
-    <div class="pricing-plan">
-      <h3>Basic</h3>
-      <p>Essential services for small businesses.</p>
-      <p>Starting at $100/month</p>
-    </div>
-    <div class="pricing-plan">
-      <h3>Paid</h3>
-      <p>Advanced services for growing businesses.</p>
-      <p>Starting at $300/month</p>
-    </div>
-    <div class="pricing-plan">
-      <h3>Premium</h3>
-      <p>All-inclusive services for enterprises.</p>
-      <p>Starting at $500/month</p>
-    </div>
-  </section>
-
-  <!-- FAQ Section -->
-   <section id="testimonials">
-    <h2>Testimonials</h2>
-    <blockquote>"Sushil has been a trusted partner in handling our tax and audit needs. Highly recommended!"</blockquote>
-    <blockquote>"Professional, thorough, and always reliable - an excellent Finance Advisor with a keen eye for details."</blockquote>
-  </section>
-
-  
-  <main><header>
-  <h1>Previous Experience</h1>
+<div class="contact-buttons">
+  <a href="mailto:sushilsubedi.com.np@gmail.com" class="contact-btn">Email Now</a>
+  <a href="tel:+9779766610249" class="contact-btn">Call Now</a>
+</div>
+<header>
+  <h1>Contact Me</h1>
 </header>
 <main>
   <section>
-    <h2>Professional Background</h2>
-    <div class="job">
-      <h3>Senior Audit Manager at BP Associates </h3>
-      <p><strong>Duration:</strong> [2021 - 2023]</p>
-      <p>As a Senior Auditor, I led audit teams, performed compliance audits, and provided recommendations to improve financial accuracy and operational efficiency.</p>
-    </div>
-    <div class="job">
-      <h3>Articleship from lochan </h3>
-      <p><strong>Duration:</strong> [2019 - 2021]</p>
-      <p>Provided tax planning services, prepared tax filings, and advised clients on tax-saving strategies, ensuring compliance with relevant tax regulations.</p>
-    </div>
+      
+    <form action="#" method="POST">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
   </section>
 </main>
+<div class="contact-buttons">
+          <a href="mailto:sushilsubedi.com.np@gmail.com" class="contact-btn">Email Now</a>
+          <a href="tel:+9779766610249" class="contact-btn">Call Now</a>
+        </div>
+</body>
+<img src="" alt="" < a href=""></a>
+<div class="piclink">
+ <a href="http://www.linkedin.com/in/sushil-subedi-9b7986158"> <img src="linkedin.png" alt=""></a>
+</div>
 
-<script src="script.js"></script>
-    <section>
-        
-      <form action="mailto:subedi1sushil@gmail.com" method="GET">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required>
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
-        <label for="message">Message:</label>
-        <textarea id="message" name="message" required></textarea>
-        <button type="submit">Send Message</button>
-      </form>
-    </section><section id="faq">
-    <h2>Frequently Asked Questions</h2>
-    <h4>What services are included in the Basic plan?</h4>
-    <p>Basic accounting and tax filing services.</p>
-    <h4>Can I customize the services in the Paid plan?</h4>
-    <p>Yes, our Paid plan is flexible and can be tailored to fit your business needs.</p>
-    <h4>Is there a satisfaction guarantee?</h4>
-    <p>We aim for 100% customer satisfaction and are committed to meeting your expectations.</p>
-  </section><<header>
-    <h1>Contact Me</h1>
-  </header>
-  </main>
-  <footer>
-  <p>&copy; <span id="year"></span> Sushil Subedi</p>
-</footer>
-  <div class="contact-buttons">
-            <a href="mailto:subedi1sushil@gmail.com" class="contact-btn">Email Now</a>
-            <a href="tel:+9779766610249" class="contact-btn">Call Now</a>
-          </div>
-  <!-- Footer -->
-  <footer>
-    <p>Contact us at: <a href="mailto:subedi1sushil@gmail.com"></a> | Phone: +977 9766610249</p>
-    <p>thesushilsubedi@gmail.com</p>
-    <p>casushilsubedi@gmail.com</p>
-    <a href="http://www.linkedin.com/in/sushil-subedi-9b7986158">Connect On Linkedln</a>
-    <p>&copy; <span id="year"></span> Sushil Subedi</p>
-  </footer>
 
-  <script src="script.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- wjgkjgfkjsdgkjg -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
