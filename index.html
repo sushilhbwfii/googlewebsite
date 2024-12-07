@@ -139,6 +139,72 @@
     opacity: 1;
   }
 }
+.profile-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.image-container {
+  flex: 1;
+  text-align: center; /* Centers image on mobile */
+}
+
+.profile-photo {
+  width: 100%;
+  max-width: 900px;
+  margin-top: 100px; /* Adjust size as needed */
+  border-radius: 10px;
+}
+
+.text-container {
+  flex: 2;
+  padding-left: 90px;
+}
+
+.text-container h1 {
+  font-size: 80px;
+  margin-top: 81px;
+}
+
+.text-container h2 {
+  font-size: 40px;
+  margin-top: 5px;
+}
+
+.text-container p {
+  font-size: 20px;
+  margin-top: 5px;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  .profile-container {
+    flex-direction: column; /* Stack the elements vertically */
+    align-items: center; /* Center elements horizontally */
+  }
+
+  .text-container {
+    padding-left: 0;
+    text-align: center; /* Align text to the center */
+  }
+
+  .text-container h1 {
+    font-size: 50px; /* Adjust font size for smaller screens */
+  }
+
+  .text-container h2 {
+    font-size: 30px;
+  }
+
+  .text-container p {
+    font-size: 18px;
+  }
+
+  .profile-photo {
+    margin-top: 20px; /* Reduce top margin for smaller screens */
+  }
+}
 
 .container {
   display: flex;
@@ -176,38 +242,69 @@
 
 }
 
-.piclink  {
-  display: flex; /* Align icons horizontally */
-  justify-content: center; /* Center the icons */
-  gap: 15px; /* Space between icons */
-}
+/* Container for social icons */
+/* Container for social icons */
 
-/* Style for individual social media icons */
-.piclink a {
-  width: 80px; /* Width of the icon */
-  height: 80px; /* Height of the icon */
+  .contact-buttons {
   display: flex;
-  justify-content: center; /* Center the icon inside the container */
-  align-items: center; /* Vertically center the icon */
-  border-radius: 50%; /* Make icons circular */
-  background-color: #3b5998; /* Default background color for Facebook (change for others) */
-  transition: all 0.3s ease; /* Add transition for hover effect */
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
 }
 
-/* Optional hover effect */
-.piclink a:hover {
-  transform: scale(1.1); /* Slight zoom effect */
-  background-color: #8b9dc3; /* Change color on hover */
+.whatsapp-button,
+.linkedin-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  border-radius: 50px;
+  padding: 10px 10px;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+  width: 100%;
+  max-width: 250px;
 }
 
-/* Icon image style */
-.piclink img {
-  width: 70%; /* Make the icon image 70% of the container size */
-  height: 70%; /* Make the icon image 70% of the container size */
-  object-fit: cover; /* Maintain aspect ratio */
+.whatsapp-button {
+  background-color: #25D366;
 }
 
+.linkedin-button {
+  background-color: #0A66C2;
+}
 
+.whatsapp-button img,
+.linkedin-button img {
+  width: 24px;
+  height:24px;
+  margin-right: 10px;
+}
+
+.whatsapp-button:hover {
+  background-color: #128C7E;
+}
+
+.linkedin-button:hover {
+  background-color: #004182;
+}
+
+/* For mobile responsiveness */
+@media (max-width: 600px) {
+  .whatsapp-button,
+  .linkedin-button {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .whatsapp-button img,
+  .linkedin-button img {
+    width:20px;
+    height:20px;
+  
+  }
+}
   </style>
 </head>
 <body>
@@ -220,22 +317,23 @@
   <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
   <ul id="nav-links">
     <li><a href="index.html">Home</a></li>
+    <li><a href="Projects.html">Previously Worked</a></li>
     <li><a href="about.html">About Us</a></li>
     <li><a href="services.html">Services</a></li>
     <li><a href="pricingcart.html">Pricing Cart</a></li>
   </ul>
 </nav>
-<div class="container">
+<div class="profile-container">
   <div class="image-container">
     <img src="daihero.jpg" alt="Your Photo" class="profile-photo">
   </div>
   <div class="text-container">
    
   <h1><strong>SUSHIL SUBEDI</strong></h1>
-  <h2>Finance Consultant_ 
+  <h2>Business Consultant
   Your trusted Consultant for precise financial solutions</h2>
   <div class="contact-buttons">
-    <a href="mailto:sushilsubedi.com.np@gmail.com" class="contact-btn">Email Now</a>
+    <a href="mailto:casushilsubedi@gmail.com" class="contact-btn">Email Now</a>
     <a href="tel:+9779766610249" class="contact-btn">Call Now</a>
   </div>
   </div>
@@ -256,12 +354,67 @@
     document.getElementById('nav-links').classList.toggle('show');
   }
 </script>
+<!-- gurus -->
 <section id="about">
   <h2>About Us</h2>
   <p>"A Legacy of Trust and Precision"</p>
   <p>With years of experience, we provide reliable and accurate financial services to meet our clients' needs with the highest level of integrity.</p>
-</section>
-<section id="services">
+  </section>
+<!-- Add this link in your <head> to include FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="stylesmultibinnionaireceo.css">
+  <section id="about">
+     
+      <h2>Previously worked on:</h2>
+      <div class="services">
+          <div class="service-card">
+              <i class="fas fa-industry"></i>
+              <h3>Manufacturing</h3>
+              <p>Helping businesses prepare accurate and timely financial statements.</p>
+          </div>
+          <div class="service-card">
+              <i class="fas fa-stethoscope"></i>
+              <h3>Health Sector</h3>
+              <p>Customized tax strategies to minimize liabilities and ensure compliance.</p>
+          </div>
+          <div class="service-card">
+              <i class="fas fa-hotel"></i>
+              <h3>Hospitality</h3>
+              <p>Efficient bookkeeping services to keep your business organized and compliant.</p>
+          </div>
+          <div class="service-card">
+              <i class="fas fa-exchange-alt"></i>
+              <h3>Trading</h3>
+              <p>Streamlined accounting and inventory management solutions for trade businesses.</p>
+          </div>
+          <div class="service-card">
+              <i class="fas fa-hand-holding-usd"></i>
+              <h3>Microfinance</h3>
+              <p>Comprehensive financial advisory and audit services for microfinance institutions.</p>
+          </div>
+          <div class="service-card">
+              <i class="fas fa-store"></i>
+              <h3>Shopping Centers & Malls</h3>
+              <p>Tailored financial services to optimize revenue and operational efficiency.</p>
+          </div>
+          <div class="service-card">
+              <i class="fas fa-truck"></i>
+              <h3>Courier & Cargo</h3>
+              <p>Ensuring smooth financial operations for logistics and transportation businesses.</p>
+          </div>
+          <div class="service-card">
+              <i class="fas fa-shopping-basket"></i>
+              <h3>Department Stores</h3>
+              <p>Accurate accounting and compliance services to manage retail operations effectively.</p>
+          </div>
+          <div class="service-card">
+              <i class="fas fa-hands-helping"></i>
+              <h3>Non-Profit Organizations (UN Projects)</h3>
+              <p>Specialized services for budget management, audits, and grant reporting.</p>
+          </div>
+      </div>
+  </section>
+  <section id="services">
   <h2>Our Services</h2>
   <div class="service-card">
     <h3>Financial Statement Preparation</h3>
@@ -274,6 +427,10 @@
   <div class="service-card">
     <h3>Bookkeeping</h3>
     <p>Efficient bookkeeping services to keep your business organized and compliant.</p>
+  </div>
+  <div class="service-card">
+    <h3>All Accounting Solution</h3>
+    <p>Helping businesses grow.</p>
   </div>
 </section>
 
@@ -304,12 +461,12 @@
   }
 
   // Start the animations for each metric
-  animateSatisfaction("satisfactionCountClient", 0, 900, 9000, " + Happy Clients");       // 100 clients
-  animateSatisfaction("satisfactionCountSatisfaction", 0, 95, 9000, "% Customer Satisfaction"); // 95% satisfaction
-  animateSatisfaction("satisfactionCountCompliance", 0, 99, 9000, "% Compliance Rate");     // 99% compliance
+  animateSatisfaction("satisfactionCountClient", 0, 900, 9900, " + Happy Clients");       // 100 clients
+  animateSatisfaction("satisfactionCountSatisfaction", 0, 95, 9900, "% Customer Satisfaction"); // 95% satisfaction
+  animateSatisfaction("satisfactionCountCompliance", 0, 99, 9900, "% Compliance Rate");     // 99% compliance
 </script>
 <div class="contact-buttons">
-  <a href="mailto:sushilsubedi.com.np@gmail.com" class="contact-btn">Email Now</a>
+  <a href="mailto:subedi1sushil@gmail.com" class="contact-btn">Email Now</a>
   <a href="tel:+9779766610249" class="contact-btn">Call Now</a>
 </div>
 <header>
@@ -324,19 +481,31 @@
       <label for="email">Email:</label>
       <input type="email" id="email" name="email" required>
       <label for="message">Message:</label>
-      <textarea id="message" name="message" required></textarea>
-      <button type="submit">Send Message</button>
+      <input type="text" name="message" required>
+      <a href="https://wa.me/9766610249" target="_blank">
+        <button type="button">WhatsApp me</button>
+      </a>
+      
+      
     </form>
   </section>
 </main>
 <div class="contact-buttons">
-          <a href="mailto:sushilsubedi.com.np@gmail.com" class="contact-btn">Email Now</a>
+          <a href="mailto:casushilsubedi@gmail.com" class="contact-btn">Email Now</a>
           <a href="tel:+9779766610249" class="contact-btn">Call Now</a>
         </div>
 </body>
-<img src="" alt="" < a href=""></a>
-<div class="piclink">
- <a href="http://www.linkedin.com/in/sushil-subedi-9b7986158"> <img src="linkedin.png" alt=""></a>
+
+<div class="contact-buttons">
+  <a href="https://wa.me/9779766610249" target="_blank" class="whatsapp-button">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />
+    Chat with us on WhatsApp
+  </a>
+  
+  <a href="http://www.linkedin.com/in/sushil-subedi-9b7986158" target="_blank" class="linkedin-button">
+    <img src="linkedin.png" alt="LinkedIn" />
+    Connect with us on LinkedIn
+  </a>
 </div>
 
 
@@ -361,75 +530,7 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- wjgkjgfkjsdgkjg -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<!-- gurus -->
 
 
 
